@@ -6,6 +6,8 @@ services:
       - "443:443"
     volumes:
       - ./deploy/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./deploy/xudage.fun_bundle.crt:/etc/nginx/ssl/xudage.fun_bundle.crt:ro
+      - ./deploy/xudage.fun.key:/etc/nginx/ssl/xudage.fun.key:ro
     depends_on:
       - portfolio
       - wedding
@@ -29,7 +31,7 @@ services:
       MYSQL_DATABASE: wedding
     volumes:
       - wedding_mysql_data:/var/lib/mysql
-      - ../wedding-invitation/sql/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+      - /home/ubuntu/wedding/sql/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
     command:
       - --default-authentication-plugin=caching_sha2_password
       - --character-set-server=utf8mb4
@@ -51,14 +53,12 @@ services:
 
   wedding:
     build:
-      context: ../wedding-invitation
+      context: /home/ubuntu/wedding
       dockerfile: Dockerfile
-      args:
-        VITE_BASE: /wedding/
     expose:
-      - "3000"
+      - "9000"
     environment:
-      PORT: "3000"
+      PORT: "9000"
       NODE_ENV: production
       MYSQL_HOST: wedding-mysql
       MYSQL_PORT: "3306"
@@ -80,7 +80,7 @@ services:
   #   build:
   #     context: ../mdict/mydict
   #   expose:
-  #     - "3000"
+  #     - "9000"
 
 volumes:
   wedding_mysql_data:
