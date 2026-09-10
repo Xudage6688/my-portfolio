@@ -2,6 +2,8 @@
 
 import BlurText from "@/components/rb/BlurText";
 import Aurora from "@/components/rb/Aurora";
+import DecryptedText from "@/components/rb/DecryptedText";
+import StarBorderButton from "@/components/rb/StarBorderButton";
 import { siteConfig } from "@/data/projects";
 import { useI18n } from "@/i18n/LocaleProvider";
 import { pick } from "@/i18n/types";
@@ -26,16 +28,25 @@ export default function HeroSection() {
           direction="top"
           className="max-w-4xl text-4xl font-semibold leading-tight text-white md:text-6xl"
         />
-        <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-300">
-          {pick(siteConfig.tagline, locale)}
-        </p>
+        <DecryptedText
+          text={pick(siteConfig.tagline, locale)}
+          speed={30}
+          maxIterations={8}
+          animateOn="view"
+          className="mt-8 max-w-2xl text-lg leading-8 text-zinc-300"
+        />
         <div className="mt-10 flex flex-wrap gap-4">
-          <a
+          <StarBorderButton
+            as="a"
             href="#projects"
-            className="rounded-full bg-cyan-400 px-6 py-3 text-sm font-medium text-[#050816] transition hover:bg-cyan-300"
+            color="#0ea5e9"
+            speed="3s"
+            backgroundColor="#050816"
+            textColor="#22d3ee"
+            borderColor="#0ea5e9"
           >
             {t.hero.viewProjects}
-          </a>
+          </StarBorderButton>
           <a
             href={siteConfig.github}
             target="_blank"

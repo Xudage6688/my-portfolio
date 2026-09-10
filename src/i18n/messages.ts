@@ -105,7 +105,7 @@ const en: Messages = {
     resumeEn: "Résumé (English PDF)",
   },
   footer: {
-    phase: "Phase 3 · Dict preview (local-first)",
+    phase: "",
   },
   dictPage: {
     metaTitle: "MyDict preview · Xudage Portfolio",
@@ -182,7 +182,7 @@ const zh: Messages = {
     resumeEn: "English Resume PDF",
   },
   footer: {
-    phase: "Phase 3 · 词典预览（本地优先）",
+    phase: "",
   },
   dictPage: {
     metaTitle: "MyDict 预览 · Xudage Portfolio",
