@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Daisy Liu · QA Automation & DevOps Portfolio",
+  title: "Liu Xu (Daisy) · Test Engineering & QA Portfolio",
   description:
-    "Senior Automation Test Engineer / SDET portfolio: QA automation, DevOps tooling, and full-stack side projects.",
+    "Senior Test Engineer / SDET: lab testing QA, test automation, k6 performance, Jira Xray, DevOps tooling, and AI-augmented testing.",
   metadataBase: new URL("https://xudage.fun"),
 };
 

@@ -21,19 +21,20 @@ export const siteConfig = {
   shortName: "Xudage",
   domain: "https://xudage.fun",
   role: {
-    en: "Senior Automation Test Engineer / SDET · 8+ Years",
-    zh: "高级自动化测试工程师 / SDET",
+    en: "Senior Test Engineer / SDET · 8+ Years",
+    zh: "高级测试工程师 / 自动化测试开发 / 质量保障 · 8年+",
   },
   tagline: {
-    en: "QA Automation · DevOps Tooling · AI-Augmented Testing",
-    zh: "QA 自动化 · DevOps 工具链 · AI 辅助测试与工程效率",
+    en: "Lab Testing QA · Test System Automation · AI-Augmented Quality",
+    zh: "实验室检测质量 · 测试系统自动化 · AI 智能测试",
   },
   bio: {
     en:
-      "Based in Shenzhen. I build Web/API/E2E automation, CI/CD and DevOps tools, and explore LLMs for test design and engineering efficiency. Projects here are from personal practice and open-source repos—source on GitHub.",
+      "Based in Shenzhen. At QIMA I own Lab Testing and myQIMA platform QA—sample intake through report delivery—with Cypress/Playwright E2E, k6 performance testing, and Jira Xray traceability. I also build DevOps tooling and LLM-driven test agents. Projects here reflect personal and open-source work on GitHub.",
     zh:
-      "现居深圳，专注 Web/API/E2E 自动化、CI/CD 与 DevOps 工具开发，并探索 LLM 在测试用例生成与工程效率中的应用。本站项目均来自个人实践与开源仓库，源码可在 GitHub 查看。",
+      "现居深圳。在 QIMA 负责实验室检测管理系统与 myQIMA 平台全链路质量保障（样品受理→检测排程→报告交付），涵盖 E2E 自动化、k6 性能压测与 Jira Xray 可追溯体系；并自研 DevOps 工具台与 LLM 驱动的 QA Test Agent。本站项目来自个人实践与开源仓库。",
   },
+  linkedin: "https://www.linkedin.com/in/daisy-liu-b98509314/",
   location: { en: "Shenzhen", zh: "深圳" },
   github: "https://github.com/Xudage6688",
   email: "liuxu15132@gmail.com",
@@ -46,54 +47,58 @@ export const siteConfig = {
 
 export const aboutHighlights: L10n[] = [
   {
-    en: "Built a QA Test Agent: natural-language requirements → Xray-format test cases",
-    zh: "独立开发 QA Test Agent：需求描述一键生成 Xray 格式测试用例",
+    en: "QA Test Agent (LLM): parse requirements → one-click Xray-format test cases",
+    zh: "自研 QA Test Agent：自动解析测试需求，一键生成完整 Xray 格式用例",
   },
   {
-    en: "QIMAGPT Proxy (Go): LibreChat → OpenAI-compatible API for internal AI tooling",
-    zh: "自研 QIMAGPT Proxy（Go）：LibreChat → OpenAI 兼容 API，统一企业 AI 工具链",
+    en: "k6 performance platform: ramping-vus, p95 < 2s thresholds; multi-scenario load & capacity planning",
+    zh: "率先落地 k6 性能测试：ramping-vus + 生产级阈值，多场景高并发压测与容量规划",
   },
   {
-    en: "#1 GitHub contributor in a 37-person team (QSP / myQIMA Portal automation)",
-    zh: "37 人团队 GitHub 仓库贡献排名第一（QSP/myQIMA Portal 自动化）",
+    en: "LT module automation 0% → 94% (core flows 100%); myQIMA core 100%; regression 3 days → 4 hours",
+    zh: "LT 模块自动化 0% → 94%（核心流程 100%），myQIMA 核心模块 100%；回归 3 天 → 4 小时",
   },
   {
-    en: "LT automation coverage 0% → 94%; myQIMA core modules 100%; regression 3 days → 4 hours",
-    zh: "LT 业务自动化覆盖率 0% → 94%，myQIMA 核心模块达 100%；回归周期 3 天 → 4 小时",
+    en: "DevOps tool platform: 8.5K LOC, 87% test coverage, 7 integrated modules (Jira / CI / Jenkins)",
+    zh: "DevOps 工具台：8.5K 行代码、87% 覆盖率，集成 Jira / CircleCI / Jenkins 等 7 大模块",
   },
   {
-    en: "Deep Cypress + Jira Xray integration; custom CircleCI / Jenkins API tooling",
-    zh: "深度集成 Cypress + Jira Xray；自研 CircleCI / Jenkins API 工具链",
+    en: "QIMAGPT Proxy (Go): OpenAI-compatible API gateway; #1 GitHub contributor in a 37-person team",
+    zh: "自研 QIMAGPT Proxy（Go）OpenAI 兼容网关；37 人团队 GitHub 贡献排名第一",
+  },
+  {
+    en: "Jira Xray deep integration: test plan → execution → auto result sync with full traceability",
+    zh: "测试管理与 Jira Xray 深度集成：计划→执行→结果回传全链路可追溯",
   },
 ];
 
 export const aboutSkillGroups = [
   {
-    label: "Automation & AI",
-    items: ["Cypress", "Playwright", "k6", "LLM Test Agent", "Prompt Engineering"],
+    label: "Test Automation",
+    items: ["Cypress", "Playwright", "Selenium", "Appium", "k6", "HttpRunner"],
   },
   {
-    label: "DevOps & Cloud",
-    items: ["CircleCI", "Jenkins", "Docker", "AWS", "Streamlit Tooling"],
+    label: "Management & CI/CD",
+    items: ["Jira Xray", "CircleCI", "Jenkins", "GitHub Actions", "Docker"],
   },
   {
-    label: "Languages",
-    items: ["Python", "TypeScript", "JavaScript", "Go", "SQL"],
+    label: "Languages & AI",
+    items: ["Python", "TypeScript", "Go", "SQL", "QA Test Agent", "Ollama / DeepSeek"],
   },
 ];
 
 export const aboutExperience = [
   {
-    company: "QIMA",
+    company: { en: "QIMA", zh: "QIMA（启迈检测）" },
     role: {
-      en: "Senior Automation Test Engineer",
-      zh: "高级自动化测试工程师",
+      en: "Test Engineer / Test System Developer",
+      zh: "测试工程师 / 测试系统开发",
     },
     period: { en: "2024.08 – Present", zh: "2024.08 – 至今" },
     location: siteConfig.location,
   },
   {
-    company: "KPMG",
+    company: { en: "KPMG", zh: "毕马威（KPMG）" },
     role: {
       en: "Senior Test Engineer / Team Leader",
       zh: "高级测试工程师 / Team Leader",
@@ -101,32 +106,53 @@ export const aboutExperience = [
     period: { en: "2021.09 – 2024.05", zh: "2021.09 – 2024.05" },
     location: siteConfig.location,
   },
+  {
+    company: { en: "Qian Da Ma (Everyday Fresh)", zh: "钱大妈" },
+    role: {
+      en: "Senior Test Engineer",
+      zh: "高级测试工程师",
+    },
+    period: { en: "2021.06 – 2021.09", zh: "2021.06 – 2021.09" },
+    location: siteConfig.location,
+  },
+  {
+    company: { en: "Ji De Cai", zh: "集德才" },
+    role: {
+      en: "Test Engineer",
+      zh: "测试工程师",
+    },
+    period: { en: "2019.06 – 2021.03", zh: "2019.06 – 2021.03" },
+    location: siteConfig.location,
+  },
 ];
 
 export const aboutEducation: L10n = {
   en:
-    "Sichuan Normal University · International Economics & Trade · B.A. (2012–2017) · Intermediate Systems Integration Project Manager (2022–2023)",
+    "Wuhan University · B.S. in Physics (2012–2017) · Intermediate System Integration Project Management Engineer (national cert., 2022–2023)",
   zh:
-    "四川师范大学 · 国际经济与贸易 · 本科（2012–2017） · 系统集成项目管理工程师（中级，2022–2023）",
+    "武汉大学 · 物理学 · 本科学士学位（2012–2017） · 中级系统集成项目管理工程师（国家认证，2022–2023）",
 };
 
 export const projects: Project[] = [
   {
     id: "qa-toolkit-demo",
     tier: "hero",
-    title: { en: "QA DevOps Toolkit", zh: "QA DevOps 工具台" },
-    subtitle: { en: "Streamlit-based QA DevOps toolkit", zh: "基于 Streamlit 的 QA DevOps 平台" },
+    title: { en: "DevOps Test Tool Platform", zh: "DevOps 测试工具平台" },
+    subtitle: {
+      en: "Python 3.12 + Streamlit · 8.5K LOC · 87% coverage",
+      zh: "Python 3.12 + Streamlit · 8.5K 行代码 · 87% 覆盖率",
+    },
     summary: {
-      en: "Streamlit hub for Jira, CircleCI, and Jenkins workflows.",
-      zh: "集成 Jira、CircleCI、Jenkins 的 Streamlit 自动化平台。",
+      en: "Integrated QA/DevOps hub: Jira, CI/CD pipelines, Jenkins deploy control, and test utilities.",
+      zh: "集成化测试与 DevOps 平台：Jira 工单、流水线管理、Jenkins 部署与测试辅助工具。",
     },
     problem: {
       en:
-        "Consolidates daily QA work across Jira, CircleCI, and Jenkins into one web UI, cutting context switching, with a testable modular Python core.",
+        "Seven built-in modules (impact analysis, image diff, PR shortcuts, CircleCI, Jira batch ops, Jenkins sequential/concurrent deploy, test tools) replace scattered CLI context switches with one testable Streamlit app.",
       zh:
-        "将 QA 日常分散在 Jira、CircleCI、Jenkins 之间的操作收敛到单一 Web 界面，降低上下文切换成本，并提供可测试的模块化 Python 逻辑层。",
+        "内置 7 大工具（影响分析、镜像对比、PR 快开、CircleCI、Jira 批量、Jenkins 顺序/并发部署、测试辅助），将分散 CLI 操作收敛为可测试的 Streamlit 平台。",
     },
-    stack: ["Python", "Streamlit", "Jira API", "CircleCI", "Jenkins"],
+    stack: ["Python 3.12", "Streamlit", "Jira API", "CircleCI", "Jenkins"],
     github: "https://github.com/Xudage6688/qa-toolkit-demo",
     placeholder: "/placeholders/qa-toolkit.svg",
   },
@@ -144,9 +170,9 @@ export const projects: Project[] = [
     },
     problem: {
       en:
-        "Maintainable Page Object + API hybrid structure covering ACA, MyQIMA, AIMS, with Xray and multi-environment config.",
+        "Page Object + API hybrid suite for Lab Testing and myQIMA (booking, payment, reports, supplier, calculator) with Jira Xray sync and multi-environment CI.",
       zh:
-        "建立 Page Object + API 混合的可维护自动化结构，覆盖 ACA、MyQIMA、AIMS 等多系统场景，并支持 Xray 与多环境配置。",
+        "Page Object + API 混合框架，覆盖实验室检测与 myQIMA 核心流程（预订、支付、报告、供应商、计算器），支持 Jira Xray 与多环境 CI。",
     },
     stack: ["Cypress", "JavaScript", "PostgreSQL", "Xray"],
     github: "https://github.com/Xudage6688/Cypress-automation-demo",
@@ -228,7 +254,7 @@ export const projects: Project[] = [
         "沉淀发布与测试辅助脚本（Jira/Confluence 导出、ArgoCD 镜像查询、并发 Jenkins 部署），形成可复用的 CLI 工具箱。",
     },
     stack: ["Python", "Jira API", "ArgoCD", "Jenkins"],
-    github: "https://github.com/Xudage6688/Experimental-tools-demo",
+    github: "https://github.com/Xudage6688/experimental-tools-demo",
     placeholder: "/placeholders/devops.svg",
   },
 ];

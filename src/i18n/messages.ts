@@ -4,7 +4,6 @@ export type Messages = {
   nav: {
     projects: string;
     about: string;
-    wedding: string;
     dict: string;
     github: string;
   };
@@ -74,12 +73,11 @@ const en: Messages = {
   nav: {
     projects: "Projects",
     about: "About",
-    wedding: "Wedding",
     dict: "Dict",
     github: "GitHub",
   },
   hero: {
-    headline: "Ship quality you can verify",
+    headline: "Traceable quality from lab workflow to release",
     viewProjects: "View projects",
     githubProfile: "GitHub Profile",
   },
@@ -87,7 +85,7 @@ const en: Messages = {
     kicker: "Selected Work",
     title: "Projects",
     intro:
-      "QA automation and DevOps tooling at the core, plus full-stack side projects you can try online.",
+      "Test automation, DevOps platforms, and AI tooling from daily QA work—plus full-stack projects you can try online.",
     heroTier: "Hero Projects",
     moreTier: "More Projects",
     moreRepos: "More repositories",
@@ -152,19 +150,18 @@ const zh: Messages = {
   nav: {
     projects: "项目",
     about: "关于",
-    wedding: "婚礼",
     dict: "词典",
     github: "GitHub",
   },
   hero: {
-    headline: "构建可验证的质量与交付效率",
+    headline: "从实验室流程到上线，质量全程可验证",
     viewProjects: "查看项目",
     githubProfile: "GitHub 主页",
   },
   projects: {
     kicker: "精选作品",
     title: "项目展示",
-    intro: "以 QA 自动化与 DevOps 工具链为主轴，辅以可在线体验的全栈 side projects。",
+    intro: "测试自动化、DevOps 工具台与 AI 测试实践为主，辅以可在线体验的全栈项目。",
     heroTier: "主打项目",
     moreTier: "更多项目",
     moreRepos: "更多仓库",

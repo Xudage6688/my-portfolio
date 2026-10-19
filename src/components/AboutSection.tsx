@@ -46,8 +46,11 @@ export default function AboutSection() {
               </h3>
               <ul className="mt-4 space-y-4">
                 {aboutExperience.map((item) => (
-                  <li key={item.company} className="border-b border-white/5 pb-4 last:border-0 last:pb-0">
-                    <p className="font-medium text-white">{item.company}</p>
+                  <li
+                    key={item.company.en}
+                    className="border-b border-white/5 pb-4 last:border-0 last:pb-0"
+                  >
+                    <p className="font-medium text-white">{pick(item.company, locale)}</p>
                     <p className="text-sm text-zinc-300">{pick(item.role, locale)}</p>
                     <p className="mt-1 text-xs text-zinc-500">
                       {pick(item.period, locale)} · {pick(item.location, locale)}
@@ -99,6 +102,14 @@ export default function AboutSection() {
                   className="text-zinc-300 transition hover:text-cyan-300"
                 >
                   github.com/Xudage6688
+                </Link>
+                <Link
+                  href={siteConfig.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-300 transition hover:text-cyan-300"
+                >
+                  LinkedIn: Daisy Liu
                 </Link>
               </div>
               <div className="mt-5 flex flex-wrap gap-3">

@@ -11,7 +11,6 @@ export default function SiteHeader() {
   const navItems = [
     { href: "/#projects", label: t.nav.projects },
     { href: "/#about", label: t.nav.about },
-    { href: "/wedding/", label: t.nav.wedding },
     { href: "/dict/", label: t.nav.dict },
   ];
 
