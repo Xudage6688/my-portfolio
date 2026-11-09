@@ -101,7 +101,7 @@ export default function AboutSection() {
                   rel="noopener noreferrer"
                   className="text-zinc-300 transition hover:text-cyan-300"
                 >
-                  github.com/Xudage6688
+                  {siteConfig.github.replace("https://", "")}
                 </Link>
                 <Link
                   href={siteConfig.linkedin}
@@ -109,7 +109,7 @@ export default function AboutSection() {
                   rel="noopener noreferrer"
                   className="text-zinc-300 transition hover:text-cyan-300"
                 >
-                  LinkedIn: Daisy Liu
+                  LinkedIn · {siteConfig.name}
                 </Link>
               </div>
               <div className="mt-5 flex flex-wrap gap-3">

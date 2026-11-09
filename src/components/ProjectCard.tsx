@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import GlareCard from "@/components/rb/GlareCard";
 import type { Project } from "@/data/projects";
@@ -13,38 +14,49 @@ type ProjectCardProps = {
 
 export default function ProjectCard({ project, featured = false }: ProjectCardProps) {
   const { locale, t } = useI18n();
+  const isGif = project.placeholder.endsWith(".gif");
 
   return (
     <GlareCard
       background="transparent"
       borderColor="transparent"
-      className="h-full"
+      className="h-full w-full"
       glareColor="#22d3ee"
       glareOpacity={0.1}
     >
       <article
-        className={`group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition hover:border-cyan-400/30 hover:bg-white/[0.05] ${
-          featured ? "md:col-span-1" : ""
+        className={`group flex h-full w-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition hover:border-cyan-400/30 hover:bg-white/[0.05] ${
+          featured ? "flex-col md:flex-row" : "flex-col"
         }`}
       >
-        <div className="relative aspect-[16/10] overflow-hidden border-b border-white/10 bg-[#0b1020]">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+        <div
+          className={`relative shrink-0 overflow-hidden border-b border-white/10 bg-[#0b1020] md:border-b-0 ${
+            featured ? "aspect-[16/10] md:aspect-auto md:h-full md:w-2/5 md:border-r" : "aspect-[16/10]"
+          }`}
+        >
+          <Image
             src={project.placeholder}
             alt={`${pick(project.title, locale)} preview`}
-            className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"
+            fill
+            unoptimized={isGif}
+            sizes={featured ? "(min-width: 768px) 40vw, 100vw" : "(min-width: 1024px) 33vw, 100vw"}
+            className="object-cover transition duration-500 group-hover:scale-[1.02]"
           />
           {featured ? (
-            <span className="absolute left-4 top-4 rounded-full bg-cyan-400/15 px-3 py-1 text-xs font-medium text-cyan-200 ring-1 ring-cyan-400/20">
+            <span className="absolute left-4 top-4 z-10 rounded-full bg-cyan-400/15 px-3 py-1 text-xs font-medium text-cyan-200 ring-1 ring-cyan-400/20">
               {t.projects.heroBadge}
             </span>
           ) : null}
         </div>
 
-        <div className="flex flex-1 flex-col p-6">
+        <div className={`flex flex-1 flex-col p-6 ${featured ? "md:p-8" : ""}`}>
           <div className="mb-3 flex items-start justify-between gap-3">
             <div>
-              <h3 className="text-xl font-semibold text-white">{pick(project.title, locale)}</h3>
+              <h3
+                className={`font-semibold text-white ${featured ? "text-2xl" : "text-xl"}`}
+              >
+                {pick(project.title, locale)}
+              </h3>
               <p className="mt-1 font-mono text-xs text-cyan-300/80">{pick(project.subtitle, locale)}</p>
             </div>
           </div>

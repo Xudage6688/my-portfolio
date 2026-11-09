@@ -6,6 +6,8 @@ export type Messages = {
     about: string;
     dict: string;
     github: string;
+    menuOpen: string;
+    backToTop: string;
   };
   hero: {
     headline: string;
@@ -34,6 +36,7 @@ export type Messages = {
   };
   footer: {
     phase: string;
+    contact: string;
   };
   dictPage: {
     metaTitle: string;
@@ -75,6 +78,8 @@ const en: Messages = {
     about: "About",
     dict: "Dict",
     github: "GitHub",
+    menuOpen: "Open menu",
+    backToTop: "Back to top",
   },
   hero: {
     headline: "Traceable quality from lab workflow to release",
@@ -104,6 +109,7 @@ const en: Messages = {
   },
   footer: {
     phase: "",
+    contact: "Contact",
   },
   dictPage: {
     metaTitle: "MyDict preview · Xudage Portfolio",
@@ -152,6 +158,8 @@ const zh: Messages = {
     about: "关于",
     dict: "词典",
     github: "GitHub",
+    menuOpen: "打开菜单",
+    backToTop: "回到顶部",
   },
   hero: {
     headline: "从实验室流程到上线，质量全程可验证",
@@ -180,6 +188,7 @@ const zh: Messages = {
   },
   footer: {
     phase: "",
+    contact: "联系方式",
   },
   dictPage: {
     metaTitle: "MyDict 预览 · Xudage Portfolio",

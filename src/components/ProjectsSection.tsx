@@ -11,7 +11,8 @@ export default function ProjectsSection() {
   const moreProjects = projects.filter((project) => project.tier === "more");
 
   return (
-    <section id="projects" className="mx-auto max-w-6xl px-6 py-24">
+    <section id="projects" className="relative mx-auto max-w-6xl px-6 py-24">
+      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-64 bg-[radial-gradient(ellipse_at_top,rgba(34,211,238,0.06),transparent_70%)]" />
       <div className="mb-12 max-w-2xl">
         <p className="font-mono text-xs uppercase tracking-[0.35em] text-cyan-300/80">
           {t.projects.kicker}
@@ -26,7 +27,9 @@ export default function ProjectsSection() {
         </h3>
         <div className="grid gap-6 lg:grid-cols-3">
           {heroProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} featured />
+            <div key={project.id} className="lg:col-span-3">
+              <ProjectCard project={project} featured />
+            </div>
           ))}
         </div>
       </div>
